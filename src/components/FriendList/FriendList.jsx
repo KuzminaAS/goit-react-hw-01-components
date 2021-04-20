@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './FriendList.css';
-
 import PropTypes from "prop-types";
 
 import FriendListItem from '../FriendListItem';
+
+import styles from './FriendList.module.css';
 
 const FriendList = ({ friends }) => {
     
@@ -12,10 +12,12 @@ const FriendList = ({ friends }) => {
     const allFriends = friends.map(({ id, ...props }) => <FriendListItem {...props} />);
         
     return (
-     <>
-    <ul class="friend-list">
+    <>
+     <section className= {styles.section}>
+    <ul className={styles.friend_list}>
         {allFriends}
     </ul>
+    </section>
     </>
     )
 }

@@ -1,0 +1,63 @@
+.profile {
+  width: 350px;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.card {
+  width: 350px;
+  height: auto;
+  margin-top: 32px;
+  background: #fff;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-top: 20px;
+  box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 0 2px 2px;
+  background-color: rgba(236, 234, 234, 0.973);
+}
+.stats .item {
+  width: calc(100% / 3);
+}
+.item:not(:first-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+.name {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgba(91, 186, 250, 0.932);
+}
+.tag {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.location {
+  font-size: 16px;
+  color: rgba(48, 11, 11, 0.692);
+}
+.label {
+  display: block;
+  padding-top: 20px;
+  font-size: 16px;
+}
+.quantity {
+  display: block;
+  padding-top: 3px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+}

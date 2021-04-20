@@ -1,0 +1,24 @@
+.transaction {
+  width: 750px;
+  border-collapse: collapse;
+  margin: 50px auto;
+}
+
+.name {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 18px;
+}
+.text {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 18px;
+}
+.body_column:nth-of-type(odd) {
+  background: rgba(238, 238, 238, 0.685);
+}
