@@ -9,7 +9,7 @@ import styles from './FriendList.module.css';
 const FriendList = ({ friends }) => {
     
 
-    const allFriends = friends.map(({ id, ...props }) => <FriendListItem {...props} />);
+    const allFriends = friends.map(({ id, ...props }) => <FriendListItem {...props} key={id} />);
         
     return (
     <>
@@ -28,15 +28,10 @@ FriendList.propTypes = {
 
     friends: PropTypes.arrayOf(
         PropTypes.shape({
-    id: PropTypes.number.isRequired,
+            id: PropTypes.number.isRequired,
     
-    avatar: PropTypes.string.isRequired,
-    
-    name: PropTypes.string.isRequired,
-
-    isOnline: PropTypes.string.isRequired,
         }
         )
-    )
+    ).isRequired
     
 }

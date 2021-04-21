@@ -4,7 +4,15 @@ import PropTypes from "prop-types";
 
 import styles from './TransactionHistory.module.css';
 
-const TransactionHistory = ({items})  => {
+const TransactionHistory = ({ items }) => {
+  
+  const transactionTableBody = items.map((item) => (
+<tr key={item.id} className={styles.body_column}>
+<td className={styles.text}>{item.type}</td>
+<td className={styles.text}>{item.amount}</td>
+<td className={styles.text}>{item.currency}</td>
+</tr>)
+)
     return (
    <>
  <table className={styles.transaction}>
@@ -16,13 +24,8 @@ const TransactionHistory = ({items})  => {
     </tr>
   </thead>
 
- <tbody className={styles.table_body}> {items.map((item) => (
-<tr key={item.id} className={styles.body_column}>
-<td className={styles.text}>{item.type}</td>
-<td className={styles.text}>{item.amount}</td>
-<td className={styles.text}>{item.currency}</td>
-</tr>)
-)}
+  <tbody className={styles.table_body}> 
+  {transactionTableBody}
   </tbody>
  </table>
     </>
@@ -33,11 +36,13 @@ export default TransactionHistory;
 
 TransactionHistory.propTypes = {
  
-  items: PropTypes.shape({
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
     id:PropTypes.number.isRequired,
     type:PropTypes.string.isRequired,
     amount: PropTypes.number.isRequired,
     currency: PropTypes.string.isRequired,
 
-  })
+    })
+  ).isRequired
 }

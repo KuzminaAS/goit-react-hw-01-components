@@ -17,30 +17,6 @@
 .item {
   width: calc(100% / 3);
 }
-/* .item:nth-child(1) {
-  background-color: #3964dbd8;
-}
-
-.item:nth-child(2) {
-  background-color: #904ddd;
-}
-
-.item:nth-child(3) {
-  background-color: #d9eb76;
-}
-.item:nth-child(4) {
-  background-color: #e768e7;
-}
-.item:nth-child(5) {
-  background-color: #df4a83;
-}
-
-.item:not(:first-child) {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-}
-.item:not(:last-child) {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-} */
 
 .title {
   font-size: 20px;
